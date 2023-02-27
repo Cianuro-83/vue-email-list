@@ -23,10 +23,10 @@
         <div class="container">
             <h1 class="text text-center text-warning text-uppercase py-5 fw-bolder">{{titolo}}</h1>
 
-            <div v-for="(mail,index) in eMail">
-                <ul>
-                    <li>{{mail}}</li>
-                </ul>
+            <div>
+                <ol>
+                    <li v-for="(mail,index) in eMail">{{mail}}</li>
+                </ol>
 
             </div>
         </div>
