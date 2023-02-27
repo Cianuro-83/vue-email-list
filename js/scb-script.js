@@ -22,7 +22,7 @@ createApp({
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((rispostaServer) => {
           console.log(rispostaServer);
-          this.eMail.push(rispostaServer.data.response[0]);
+          this.eMail.push(rispostaServer.data.response);
           console.log(this.eMail);
         });
     },
