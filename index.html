@@ -23,10 +23,10 @@
         <div class="container">
             <h1 class="text text-center text-warning text-uppercase py-5 fw-bolder">{{titolo}}</h1>
 
-            <div v-for="mail in eMail">
-                <ol>
-                    <li>{{mail.data}}</li>
-                </ol>
+            <div v-for="(mail,index) in eMail">
+                <ul>
+                    <li>{{mail}}</li>
+                </ul>
 
             </div>
         </div>
@@ -42,7 +42,8 @@
 
 
     <!-- MY JAVA SCRIPT -->
-    <script src="./js/scb-script.js"></script>
+    <script src=" ./js/scb-script.js">
+    </script>
 
 </body>
 

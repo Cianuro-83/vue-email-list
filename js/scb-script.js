@@ -23,7 +23,7 @@ createApp({
         .then((rispostaServer) => {
           console.log(rispostaServer);
           this.eMail.push(rispostaServer.data.response);
-          console.log(this.eMail);
+          console.log("ciao ", this.eMail);
         });
     },
     //---------------------------------------------------------------------------
