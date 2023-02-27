@@ -22,9 +22,13 @@
     <div id="app">
         <div class="container">
             <h1 class="text text-center text-warning text-uppercase py-5 fw-bolder">{{titolo}}</h1>
-            <ol>
-                <li>{{eMail}}</li>
-            </ol>
+
+            <div v-for="mail in eMail[data]">
+                <ol>
+                    <li>{{mail.data}}</li>
+                </ol>
+
+            </div>
         </div>
     </div>
 

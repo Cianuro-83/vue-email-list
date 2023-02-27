@@ -1,4 +1,4 @@
-console.log("Ciao Cianuro... Oggi l'esercizio è VUE EMAILO LIST ");
+console.log("Ciao Cianuro... Oggi l'esercizio è VUE EMAIL LIST ");
 //---------------------------------------------------------------------------
 // ||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
 //---------------------------------------------------------------------------
@@ -22,16 +22,20 @@ createApp({
         .get("https://flynn.boolean.careers/exercises/api/random/mail")
         .then((rispostaServer) => {
           console.log(rispostaServer);
-          this.email.push(rispostaServer.data);
+          this.eMail.push(rispostaServer.data.response[0]);
           console.log(this.eMail);
-          let result = rispostaServer.data.response;
-          console.log(result);
         });
     },
     //---------------------------------------------------------------------------
     // FINE METODI
   },
   //---------------------------------------------------------------------------
+  //   HOOKS
+  mounted() {
+    for (let i = 0; i < 10; i++) {
+      this.recuperaMail();
+    }
+  },
   //---------------------------------------------------------------------------
   // |||||||||||||||||||||||||||| VUE ||||||||||||||||||||||||||||
 }).mount("#app");
